@@ -1,0 +1,15 @@
+.animation{
+    animation: anime 1s ease 1;
+}
+.reverse-animation{
+    animation: anime 1s ease 1 reverse;
+}
+
+@keyframes anime {
+    0%{
+        scale: 2;
+    }
+    100%{
+        scale: 1;
+    }
+}
