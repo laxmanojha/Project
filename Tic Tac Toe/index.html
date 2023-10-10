@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./Effects/effect.css">
+    <link rel="stylesheet" href="./Effects/startButton.css">
+    <link rel="stylesheet" href="./Effects/playerWin.css">
+    <link rel="stylesheet" href="./Effects/tableData.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+
+    <div class="shortWidth">
+        <img src="./images/error.png" width="200px"/>
+        <p>Switch to Laptop or bigger screen</p>
+        <p>to have real fun!</p>
+    </div>
+    <div class="wrapperone">
+        <div class="upperslide"></div>
+        <div class="lowerslide"></div>
+        <div class="button"><p class="effect">Let's Play</p></div>
+    </div>
+    <div class="goBack"></div>
+
+    <div class="wrapper">
+
+        <div class="heading"><h1>Tic Tac Toe</h1></div>
+
+        <div class="main-container">
+
+            <div onclick="fillBox1()" class="box1 box"><div class="image image1"></div></div>
+            <div onclick="fillBox2()" class="box2 box"><div class="image image2"></div></div>
+            <div onclick="fillBox3()" class="box3 box"><div class="image image3"></div></div>
+            <div onclick="fillBox4()" class="box4 box"><div class="image image4"></div></div>
+            <div onclick="fillBox5()" class="box5 box"><div class="image image5"></div></div>
+            <div onclick="fillBox6()" class="box6 box"><div class="image image6"></div></div>
+            <div onclick="fillBox7()" class="box7 box"><div class="image image7"></div></div>
+            <div onclick="fillBox8()" class="box8 box"><div class="image image8"></div></div>
+            <div onclick="fillBox9()" class="box9 box"><div class="image image9"></div></div>
+    
+        </div>
+
+        
+        <div class="bothPlayerCard">
+            <div class="playerMultiply playerCard">Player</div>
+            <div class="playerCircle playerCard">Player</div>
+        </div>
+
+        <!-- Table for Data printing  -->
+    <table class="dataTable">
+        <tr>
+            <th>Player</th>
+            <th>Matches Win</th>
+            <th>Total Matches</th>
+        </tr>
+        <tr>
+            <td><img src="./images/multiply.png" height="60px"></td>
+            <td class="multiplyWinningCount"></td>
+            <td class="totalMatchCount" rowspan="0"></td>
+        </tr>
+        <tr>
+            <td><img src="./images/circle.png" height="50px"></td>
+            <td class="circleWinningCount"></td>
+        </tr>
+    </table>
+
+    </div>
+
+    <div class="startMain"><button class="startButton">START</button></div>
+    
+    <!--Player Win Card in the End-->
+    <div class="playerWin">
+        <div class="playerMultiplyWin">
+            <p class="winner">WINNER</p>
+            <img class="winnerLogoAnimation" src="./images/multiply.png">
+        </div>
+        <div class="CloseandPlayAgainbtn">
+            <button class="closeNow font">Close Now</button>
+            <button class="playAgain font">Play Again</button>
+        </div>
+    </div>
+
+    <div class="playerWin">
+        <div class="playerCircleWin">
+            <p class="winner">WINNER</p>
+            <img class="winnerLogoAnimation" src="./images/circle.png">
+        </div>
+        <div class="PlayAgainbtn">
+            <button class="closeNow font">Close Now</button>
+            <button class="playAgain font">Play Again</button>
+        </div>
+    </div>
+
+    <!-- Table for Data printing  -->
+    <table class="dataTable">
+        <tr>
+            <th>Player</th>
+            <th>Matches Win</th>
+            <th>Total Matches</th>
+        </tr>
+        <tr>
+            <td><img src="./images/multiply.png" height="60px"></td>
+            <td class="multiplyWinningCount">0</td>
+            <td class="totalMatchCount" rowspan="0">0</td>
+        </tr>
+        <tr>
+            <td><img src="./images/circle.png" height="50px"></td>
+            <td class="circleWinningCount">0</td>
+        </tr>
+    </table>
+
+    <script src="index.js"></script>
+    <script src="./Effects/effect.js"></script>
+</body>
+</html>

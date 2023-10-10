@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(0, 0, 0);
+}
+.startMain{
+    position: absolute;
+    top: 10rem;
+    left: 22.5rem;
+    width: 35rem;
+    height: 15rem;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(137, 137, 137);
+    box-shadow: 0 0 10px black;
+    visibility: hidden;
+    scale: 0;
+}
+
+.startButton{
+    width: 30%;
+    height: 25%;
+    background-color: black;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.startMainVisibility{
+    visibility: visible;
+    scale: 1;
+}

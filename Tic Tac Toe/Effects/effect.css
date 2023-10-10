@@ -1,0 +1,211 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.wrapperone{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    /* z-index: 10; */
+}
+
+.button{
+    width: 5rem;
+    height: 5rem;
+    background-color: orange;
+    position: absolute;
+    top: calc(50vh - 2.5rem);
+    left: calc((50vw - 2.5rem));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.btnOpacity{
+    animation: btnopacity 3s ease 1 normal;
+}
+
+@keyframes btnopacity {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+.textEffect{
+    animation: texteffect 3s ease 1 normal;
+}
+@keyframes texteffect {
+    from{
+        opacity: 1;
+        scale: 1;
+    }
+    to{
+        opacity: 0;
+        scale: 20;
+    }
+}
+
+
+.upperslide{
+    width: 100vw;
+    height: 50vh;
+    background-color: rgb(75, 73, 75);
+}
+
+.lowerslide{
+    width: 100vw;
+    height: 50vh;
+    top: 50vh;
+    position: absolute;
+    background-color: rgb(75, 73, 75);
+}
+.upAnimation{
+    animation: upanimation 3s ease 1 normal;
+}
+.lowAnimation{
+    animation: lowanimation 3s ease 1 normal;
+}
+
+@keyframes upanimation {
+    from{
+        height: 50vh;
+    }
+    to{
+        height: 0vh;
+    }
+}
+@keyframes lowanimation {
+    from{
+        height: 50vh;
+        top: 50vh;
+    }
+    to{
+        height: 0vh;
+        top: 100vh;
+    }
+}
+
+.hideDisplay{
+    visibility: hidden;
+}
+
+.goBackfn{
+    position: absolute;
+    height: 5rem;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(68, 78, 75);
+    cursor: pointer;
+    border-radius: 50%;
+    bottom: 2rem;
+    left: calc(100vw - 8rem);
+    user-select: none;
+}
+.goBackAnimation{
+    animation: gobackanimation 3s ease 1 normal;
+}
+@keyframes gobackanimation {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+/*Reverting back to the front page after clicking close game button*/
+
+
+/* for reverting button  */
+.btnOpacityRevert{
+    animation: btnopacityrevert 3s ease 1 normal;
+}
+
+@keyframes btnopacityrevert {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* For text revert  */
+.textEffectRevert{
+    animation: textEffectrevert 3s ease 1 normal;
+}
+@keyframes textEffectrevert {
+    from{
+        opacity: 0;
+        scale: 20;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+/* for reverting slides  */
+.upAnimationRevert{
+    animation: upanimationrevert 3s ease 1 normal;
+}
+.lowAnimationRevert{
+    animation: lowanimationrevert 3s ease 1 normal;
+}
+@keyframes upanimationrevert {
+    from{
+        height: 0vh;
+    }
+    to{
+        height: 50vh;
+    }
+}
+@keyframes lowanimationrevert {
+    from{
+        height: 0vh;
+        top: 100vh;
+    }
+    to{
+        height: 50vh;
+        top: 50vh;
+    }
+}
+
+/* close game button opacity revert  */
+.goBackAnimationRevert{
+    animation: gobackanimationrevert 3s ease 1 normal;
+}
+@keyframes gobackanimationrevert {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+
+/* @media only screen and (max-width: 400px) {
+    .goBackfn{
+        position: absolute;
+        height: 2rem;
+        width: 6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: darkgray;
+        cursor: pointer;
+        border-radius: 50%;
+        bottom: 1rem;
+        left: calc(100vw - 8rem);
+    }
+} */

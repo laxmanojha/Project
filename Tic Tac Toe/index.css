@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.shortWidth{
+    color: white;
+    display: none;
+}
+.shortWidthInfo{
+    z-index: 10;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(75, 73, 75);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(54, 63, 60);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    /* opacity: 0.2; */
+    /* visibility: hidden; */
+}
+
+.lessOpacity{
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.wrapperAnimation{
+    animation: wrapperanimation 3s ease 1 normal;
+}
+@keyframes wrapperanimation {
+    from{
+        opacity: 0;
+        scale: 2;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+/* Reverting the game console animation  */
+.wrapperAnimationRevert{
+    animation: wrapperanimationrevert 3s ease 1 normal;
+}
+@keyframes wrapperanimationrevert {
+    from{
+        opacity: 1;
+        scale: 1;
+    }
+    to{
+        opacity: 0;
+        scale: 2;
+    }
+}
+
+
+.heading{
+    font-family: 'Source Sans Pro', sans-serif;
+    border: 10px solid rgb(91, 114, 107);
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border-image: url('./images/multiply.png');
+    color: rgb(12, 25, 28);
+    font-size: 2rem;
+    text-shadow: 0px 0px 5px black;
+    user-select: none;
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 10px solid rgb(91, 114, 107);
+    border-radius: 5px;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: azure;
+    border: 2px solid black;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: all .4s;
+}
+.box:hover{
+    scale: 1.04;
+    background-color: rgb(223, 223, 223);
+}
+
+.image{
+    width: 50%;
+    height: 50%;
+}
+
+.multiply{
+    background-image: url('./images/multiply.png');
+    background-size: cover;
+}
+.circle{
+    background-image: url('./images/circle.png');
+    background-size: contain;
+}
+
+.bothPlayerCard{
+    position: absolute;
+    width: 12rem;
+    height: auto;
+    /* opacity: 0.1; */
+    pointer-events: none;
+    background-color: rgba(33, 31, 63, 0.294);
+    top: calc(100vh - 80vh);
+    left: calc(100vw - 90vw);
+    border-radius: 20px;
+    visibility: hidden;
+}
+
+.playerCardVisibility{
+    visibility: visible;
+}
+
+.playerCard{
+    width: 10rem;
+    height: 9rem;
+    background-color: rgba(33, 31, 63, 0.294);
+    margin: 1rem;
+    font-size: 3rem;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    text-align: center;
+    text-shadow: 0px 0px 5px rgb(0, 0, 0);
+    border: 1px solid black;
+    border-radius: 20px;
+    opacity: 0.5;
+}
+
+.playerMultiply{
+    background-image: url(./images/multiply.png);
+    background-repeat: no-repeat;
+    background-size:50%;
+    background-position-x: center;
+    background-position-y: calc(100% - 10%);
+}
+.IncreaseOpacity{
+    opacity: 1;
+}
+
+.playerCircle{
+    background-image: url(./images/circle.png);
+    background-repeat: no-repeat;
+    background-size:40%;
+    background-position-x: center;
+    background-position-y: calc(100% - 12%);
+}
+
+
+
+/* @media only screen and(max-width: 400px) {
+    .main-container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        position: absolute;
+        top: 2rem;
+    }
+} */
